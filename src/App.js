@@ -102,7 +102,7 @@ export default function App() {
   };
 
   if (!user) {
-    return <Login onLogin={() => {}} />;
+    return <Login onLogin={() => { }} />;
   }
 
   return (
@@ -116,8 +116,7 @@ export default function App() {
         }}
       >
         <div>
-          <strong>{esteAdmin ? "Admin" : "Utilizator"}:</strong>{" "}
-          {user.email}
+          <strong>{esteAdmin ? "Admin" : "Utilizator"}:</strong> {user.email}
           {esteAdmin && (
             <Link to="/user-management" style={{ marginLeft: 20 }}>
               Gestionează Utilizatori

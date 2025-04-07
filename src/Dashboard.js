@@ -192,18 +192,6 @@ export default function Dashboard() {
 
   return (
     <div style={{ maxWidth: 900, margin: "40px auto", padding: 20 }}>
-      <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 20 }}>
-        <div>
-          <strong>{esteAdmin ? "Admin" : "Utilizator"}:</strong>{" "}
-          {auth.currentUser?.email}
-        </div>
-        {esteAdmin && (
-          <Link to="/user-management" style={{ marginLeft: 20 }}>
-            Gestionează Utilizatori
-          </Link>
-        )}
-      </div>
-
       <h2>Formulare primite</h2>
 
       {!selected && (
@@ -229,7 +217,6 @@ export default function Dashboard() {
           />
         </div>
       )}
-
       {selected ? (
         <div style={{ maxWidth: 800, margin: "40px auto", padding: 20 }}>
           <h2>Editează formular</h2>
